@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script
+      src="https://kit.fontawesome.com/6f917e9db0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#ffffff]">
+    <div class="flex justify-center items-center relative">
+      <audio src="/assets/Macan Band - Bale.mp3" id="track"></audio>
+    </div>
+    <div class="player-container flex  flex-col absolute h-[400px] w-80 m-auto top-0 left-0 right-0 bottom-0 overflow-hidden justify-center items-center rounded-[10px]">
+      <img src="/assets/Macan-Band-Bale.jpg" alt="" id="thumbnail" class="absolute object-fill h-full w-full top-[-10%] transition-[1s] z-[3] " />
+      <div class="box absolute h-[45%] w-full z-[4] bottom-[-10%] grid gap-x-2.5 ">
+        <div class="play-pause flex justify-end items-center ">
+          <i class="far fa-play-circle fa-3x  invert-[1] cursor-pointer" id="play"></i>
+          <i class="far fa-pause-circle fa-3x invert-[1] cursor-pointer hidden " id="pause"></i>
+        </div>
+        <div class="track-info flex flex-col justify-center items-start pl-[5%] ">
+          <div id="track-artist" class="text-white text-lg font-bold  ">Macan-Band</div>
+          <div id="track-title" class="text-white text-xs  ">Bale</div>
+        </div>
+        <div class="next-prev flex flex-col justify-center items-start">
+          <i class="far fa-arrow-alt-circle-left fa-2x  invert-[1] cursor-pointer" id="prev-track"></i>
+          <i class="far fa-arrow-alt-circle-right fa-2x  invert-[1] cursor-pointer" id="next-track"></i>
+        </div>
+        <div class="progress-bar flex justify-center items-center">
+          <input class="appearance-none h-1.5 bg-white w-[57.5%] outline-none rounded-[30px]" type="range" id="progressBar" min="0" max="" value="0" />
+        </div>
+        <div class="track-time flex justify-around items-start">
+          <div id="currentTime" class="text-xs text-white"></div>
+          <div id="durationTime" class="text-xs text-white "></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

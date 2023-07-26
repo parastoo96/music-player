@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*custom  style*/
+
+.player-container{
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+    0 2px 2px rgba(0,0,0,0.11), 
+    0 4px 4px rgba(0,0,0,0.11), 
+    0 6px 8px rgba(0,0,0,0.11),
+    0 8px 16px rgba(0,0,0,0.11);
+} 
+
+.box{
+    /* background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); */
+    background: #373B44;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    grid-template-columns:53px 164px 35px;
+    grid-template-rows: 85px 25px 25px;
+    grid-template-areas:
+        "one two two three"
+        "four four four four"
+        "five five five five";
+}
+.play-pause {
+    grid-area:one;
+}
+.track-info {
+    grid-area: two;
+}
+.next-prev {
+    grid-area: three;
+}
+.progress-bar {
+    grid-area: four;
+}
+#progressBar::-webkit-slider-thumb {
+    appearance: none;
+    height: 11px;
+    width: 11px;
+    outline: none;
+    background: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+
+  .track-time {
+    grid-area: five;
+}
